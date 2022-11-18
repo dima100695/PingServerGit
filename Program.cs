@@ -34,8 +34,18 @@ namespace PingServer
 
         static void Main(string[] args)
         {
+            hostName = "192.168.1.4";
+            Getping();
+            if (pingStatus == true)
+            {
+                Console.WriteLine($"успешно удалось получиь ответ от {hostName}");
+            }
+            else
+            {
+                Console.WriteLine($"Хост {hostName} не отвечает :(");
+            }
 
-
+            Console.ReadKey();
 
         }
     }
